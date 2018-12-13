@@ -1,0 +1,3 @@
+# Spotaroom Gitignore Configuration
+node_modules
+package-lock.json
