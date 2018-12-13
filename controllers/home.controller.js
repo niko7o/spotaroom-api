@@ -7,11 +7,19 @@ module.exports.greet = (req, res, next) => {
     })
 }
 
-module.exports.getAllHomes = (req, res, next) => {    
+module.exports.getHomeIds = (req, res, next) => {
+
+}
+
+module.exports.getHomesFromId = (req, res, next) => {
+
+}
+
+module.exports.getAllHomes = (req, res, next) => {
     axios.get(`${query.BASE_URL}/${query.DEFAULT_CITY}`)
     .then(response => {
         const ids = response.data.data.map(home => home.id);
-        const parameters = ids.map(id => `ids[]=${id}`).slice(0,10);
+        const parameters = ids.map(id => `ids[]=${id}`).slice(0,30);
         const fullURLParameters = parameters.join('&');
     
         axios.get(`${query.HOMESEARCH_URL}${fullURLParameters}`)
