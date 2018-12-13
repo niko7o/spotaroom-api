@@ -1,5 +1,5 @@
 const axios = require('axios');
-const query = require('../utils/query.utils');
+const query = require('../utils/query.constants');
 
 module.exports.greet = (req, res, next) => {
     res.status(200).json({
