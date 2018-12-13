@@ -1,4 +1,4 @@
-const whitelist = ['http://localhost:8000']
+const whitelist = [process.env.WHITELISTED_URL]
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
