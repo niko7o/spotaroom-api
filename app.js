@@ -33,4 +33,6 @@ app.use(function(err, req, res, next) {
     });
   });
 
-app.listen(port, `Spotaroom REST API listening @ port ${port} with CORS enabled`);
+app.listen(port);
+
+console.info(`Spotaroom REST API listening @ port ${port} with CORS enabled`);
