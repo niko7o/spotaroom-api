@@ -3,7 +3,7 @@
 ### Server
 http://localhost:8000
 
-- Run with npm start before opening client
+- Run with npm i & npm start before opening client
 - Node.js
 - No frameworks used, just a small simple server with CORS setup
 - Simple GET routes
