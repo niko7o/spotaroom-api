@@ -8,14 +8,16 @@ const app = express();
 const cors = require('cors');
 const homeRouter = require('./routes/home.routes');
 
+// Middlewares
 app.use(cors())
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Routes
 app.use('/api', homeRouter);
 
-// 404
+// 404 Not Found
 app.get('*', function (req, res) {
     res.status(404).json({
         message: 'Page not found'
@@ -31,6 +33,4 @@ app.use(function(err, req, res, next) {
     });
   });
 
-app.listen(port);
-
-console.info(`Spotaroom REST API listening @ port ${port} with CORS enabled`);
+app.listen(port, `Spotaroom REST API listening @ port ${port} with CORS enabled`);
