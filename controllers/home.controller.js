@@ -35,10 +35,6 @@ module.exports.getSpecificTypeHomes = (req, res, next) => {
     })
 }
 
-// module.exports.getHomesFromIds = (req, res, next) => {
-    
-// }
-
 module.exports.getAllHomes = (req, res, next) => {
     axios.get(`${query.BASE_URL}/${query.DEFAULT_CITY}`)
     .then(response => {
